@@ -16,7 +16,7 @@ export class AppComponent {
       tagIds: [""]
     });
   }
-  // public tagIds: FormControl = new FormControl("");
+  
   tags = [
     { tagId: 1, tagName: "JAVA" },
     { tagId: 2, tagName: "CEO" },
