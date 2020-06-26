@@ -1,0 +1,19 @@
+      <div class="form-group col-12 col-md-6">
+          <label for="Tag" class="input-label">Tags</label>
+          <ng-select [items]="tags" bindLabel="tagName" bindValue="tagId" [multiple]="true" 
+            [clearable]="false" [closeOnSelect]="false" placeholder="Select Tags" labelForId="Tag" clearAllText="Clear" [addTag]="true"
+            [virtualScroll]="true" formControlName="tagIds" class="ng-multi-select">
+            <ng-template ng-optgroup-tmp let-item="item" let-index="index" let-item$="item$">
+              <div class="title" title="{{item.tagName}}">{{item.tagName}}</div>
+            </ng-template>
+            <!-- <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+              <div class="ng-value" *ngFor="let item of items | slice:0:5">
+                <span class="ng-value-label"> {{item.tagName}}</span>
+              </div>
+              <div class="ng-value" *ngIf="items.length > 5">
+                <span class="ng-value-label">{{items.length - 5}} + </span>
+              </div>
+            </ng-template> -->
+          </ng-select>
+        </div>
+       
