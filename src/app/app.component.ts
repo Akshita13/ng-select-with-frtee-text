@@ -8,6 +8,7 @@ import { FormControl, FormBuilder, FormGroup } from "@angular/forms";
 export class AppComponent {
   userFormGroup;
   tagArray: any[] = [];
+  isSet:boolean=true
   constructor(private fb: FormBuilder) {
     this.userFormGroup = this.buildForm();
   }
@@ -21,6 +22,12 @@ export class AppComponent {
   addTagDetail = (name: string): string => this.addNew(name);
 
   addNew(value) {
+      
+    if(value.length<10){
+      this.isSet=true
+    }else{
+      this.isSet=false
+    }
     return value;
   }
 
